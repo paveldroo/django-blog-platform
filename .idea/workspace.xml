@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ac3174c-23d6-4bb8-948c-f654872d219a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/trydjango.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/trydjango.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,13 +62,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/posts/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="144">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
               <folding>
                 <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/posts/tests.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -94,7 +97,9 @@
     <option name="width" value="1622" />
     <option name="height" value="1027" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -106,16 +111,6 @@
           <expand>
             <path>
               <item name="trydjango" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trydjango" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trydjango" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trydjango" type="462c0819:PsiDirectoryNode" />
-              <item name="posts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="trydjango" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trydjango" type="462c0819:PsiDirectoryNode" />
               <item name="trydjango" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -182,15 +177,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1563094496845</updated>
-      <workItem from="1563094509431" duration="3546000" />
+      <workItem from="1563094509431" duration="4256000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3546000" />
+    <option name="totallyTimeSpent" value="4256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="58" y="23" width="1622" height="1027" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613924" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -253,10 +249,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/posts/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/posts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#36#0" expanded="true" />
           </folding>
