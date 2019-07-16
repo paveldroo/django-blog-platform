@@ -6,5 +6,15 @@
 </head>
 <body>
 <h1>{{ title }} is working!</h1>
+{% for obj in objects_list %}
+    <a href={{ obj.get_absolute_url }}>{{ obj.title }}<a><br/>
+    {{ obj.timestamp }}<br/>
+    {{ obj.updated }}<br/>
+    {{ obj.content }}<br/>
+{% endfor %}
+
+
+
+
 </body>
 </html>
