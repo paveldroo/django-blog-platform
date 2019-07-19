@@ -13,7 +13,7 @@ def post_list(request):
         'objects_list': queryset,
         'title': 'Post List'
     }
-    return render(request, 'index.html', context)
+    return render(request, 'post_list.html', context)
 
 
 def post_create(request):
@@ -23,10 +23,9 @@ def post_create(request):
         instance.save()
         messages.success(request, 'Post successfully created!')
         return HttpResponseRedirect(instance.get_absolute_url())
-    else:
-        messages.error(request, 'Post not created!')  # Fail warning always shows and twice
 
     context = {
+        'title': 'Create Post',
         'form': form
     }
 
