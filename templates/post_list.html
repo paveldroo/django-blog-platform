@@ -1,11 +1,23 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1>{{ title }}</h1>
-    {% for obj in objects_list %}
-        <a href={{ obj.get_absolute_url }}>{{ obj.title }}<a><br/>
-        {{ obj.timestamp }}<br/>
-        {{ obj.updated }}<br/>
-        {{ obj.content }}<br/>
-    {% endfor %}
-
+    <div class="col-sm-6 offset-sm-3">
+        <h1>{{ title }}</h1>
+        {% for obj in objects_list %}
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}
+                                <small>{{ obj.timestamp|timesince }} ago</small>
+                            </a></h5>
+                            <p class="card-text">{{ obj.content|linebreaks|truncatechars:120 }}</p>
+                            <a href="{{ obj.get_absolute_url }}" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+        {% endfor %}
+    </div>
 {% endblock content %}
+
