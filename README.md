@@ -1,5 +1,5 @@
-# blog_try_django
-Creating a blog using Django
+# One Random TechCrunch Morning News
+Just 1 News. Just once at morning. Everyday...
 
 # Public admin pswd for the educational purpose
 paveldruzhinin

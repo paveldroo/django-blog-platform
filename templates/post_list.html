@@ -7,17 +7,34 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}
+                            <h5 class="card-title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a>
                                 <small>{{ obj.timestamp|timesince }} ago</small>
-                            </a></h5>
-                            <p class="card-text">{{ obj.content|linebreaks|truncatechars:120 }}</p>
+                            </h5>
+                            <p class="card-text">{{ obj.content|linebreaks|truncatechars:150 }}</p>
                             <a href="{{ obj.get_absolute_url }}" class="btn btn-primary">View</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <hr/>
+            <br>
         {% endfor %}
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if objects_list.has_previous %}
+                    <a href="?{{ page_request_var }}={{ objects_list.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ objects_list.number }} of {{ objects_list.paginator.num_pages }}
+                </span>
+
+                {% if objects_list.has_next %}
+                    <a href="?{{ page_request_var }}={{ objects_list.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
+
     </div>
 {% endblock content %}
 
