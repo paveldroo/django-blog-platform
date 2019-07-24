@@ -4,6 +4,9 @@
 
 {% block content %}
     <div class="col-sm-6 offset-sm-3">
+        {% if instance.image %}
+            <img src="{{ instance.image.url }}" class="img-fluid">
+        {% endif %}
         <h1>{{ title }}
             <small>{{ instance.timestamp }}</small>
         </h1>
