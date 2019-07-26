@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.db.models.signals import pre_save
-# Create your models here.
 from django.utils.text import slugify
 
 
