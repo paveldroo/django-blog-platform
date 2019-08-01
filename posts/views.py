@@ -33,12 +33,15 @@ def post_list(request):
 
 
 def post_create(request):
+    if not request.user.is_authenticated:
+        raise Http404
     if not request.user.is_staff or not request.user.is_superuser:
         raise Http404
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         instance = form.save(commit=False)
         instance.content = instance.content.replace(u"\u2018", "'").replace(u"\u2019", "'")
+        instance.user = request.user
         instance.save()
         messages.success(request, 'Post successfully created!')
         return HttpResponseRedirect(instance.get_absolute_url())

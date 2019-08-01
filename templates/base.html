@@ -10,6 +10,9 @@
     <title>{% block head_title %}Try Django 1.9{% endblock head_title %}</title>
 </head>
 <body>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0"></script>
 
 {% include 'messages_display.html' %}
 <div class="'container">
