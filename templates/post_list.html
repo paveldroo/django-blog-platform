@@ -10,10 +10,13 @@
                             {% if obj.image %}
                                 <img src="{{ obj.image.url }}" class="img-fluid" style="margin-bottom: 10px">
                             {% endif %}
+                            {% if obj.draft %}
+                                <h4>Staff only: Draft</h4>
+                            {% endif %}
+                            {% if obj.publish > today %}
+                                <h4>Staff only: Future Post</h4>
+                            {% endif %}
                             <h5 class="card-title"><a href="{{ obj.get_absolute_url }}">{{ obj.title }}</a><br/>
-                                {% if obj.draft %}
-                                    <span style="color:red">Draft</span>
-                                {% endif %}
                                 <small>{{ obj.publish }}</small>
                             </h5>
                             {% if obj.user.get_full_name %}
