@@ -1,5 +1,5 @@
 # One Random TechCrunch Morning News
-Just 1 News. Just once at morning. Everyday...
+Just One Post. Just Once at Morning. Everyday...
 
 # Public admin pswd for the educational purpose
 paveldruzhinin
