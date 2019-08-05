@@ -56,6 +56,8 @@ def post_create(request):
         instance = form.save(commit=False)
         instance.content = instance.content.replace(u"\u2018", "'").replace(u"\u2019", "'")
         instance.user = request.user
+        if not instance.publish:
+            instance.publish = timezone.now().date()
         instance.save()
         messages.success(request, 'Post successfully created!')
         return HttpResponseRedirect(instance.get_absolute_url())
