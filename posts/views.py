@@ -54,7 +54,7 @@ def post_create(request):
     form = PostForm(request.POST or None, request.FILES or None)
     if form.is_valid():
         instance = form.save(commit=False)
-        instance.content = instance.content.replace(u"\u2018", "'").replace(u"\u2019", "'")
+        instance.content = instance.content.replace(u"\u2018", "'").replace(u"\u2019", "'").strip()
         instance.user = request.user
         if not instance.publish:
             instance.publish = timezone.now().date()

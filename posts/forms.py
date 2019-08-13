@@ -1,9 +1,14 @@
 from django import forms
+from django.utils import timezone
+from pagedown.widgets import PagedownWidget
 
 from posts.models import Post
 
 
 class PostForm(forms.ModelForm):
+    content = forms.CharField(widget=PagedownWidget)
+    publish = forms.DateField(widget=forms.SelectDateWidget, initial=timezone.now())
+
     class Meta:
         model = Post
         fields = [
