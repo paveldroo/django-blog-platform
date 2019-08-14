@@ -37,13 +37,40 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.7.0/marked.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-        $(".content-markdown").each(function () {
-            var content = $(this).text().trim();
-            var markedContent = marked(content);
-            $(this).html(markedContent)
-        })
-        $(".content-markdown img").each(function () {
+        $(".post-detail-item img").each(function () {
             $(this).addClass('img-fluid')
+        });
+
+        let contentInput = $("#id_content");
+        console.log(contentInput.val())
+
+        function setContent(value) {
+            let markedContent = marked(value);
+            $("#preview-content").html(markedContent)
+            $("#preview-content img").each(function () {
+                $(this).addClass('img-fluid')
+            })
+        }
+
+        setContent(contentInput.val());
+
+        contentInput.keyup(function () {
+            let newContent = $(this).val();
+            setContent(newContent)
+        })
+
+        let titleInput = $("#id_title");
+
+        function setTitle(value) {
+            let markedContent = marked(value);
+            $("#preview-title").html(markedContent)
+        }
+
+        setTitle(titleInput.val());
+
+        titleInput.keyup(function () {
+            let newTitle = $(this).val();
+            setTitle(newTitle)
         })
     })
 </script>
