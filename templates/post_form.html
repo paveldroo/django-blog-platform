@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 {% block head_title %} {{ block.super }} | {{ title }} {% endblock head_title %}
 {% block extra_head %}
     {{ form.media }}
 {% endblock extra_head %}
 {% block content %}
-    {#    <div style="display: inline-block">#}
     <div style="display: flex; justify-content: center">
         <div class="col-sm-6">
             <h1>Preview</h1>
@@ -18,7 +18,7 @@
             <h1>{{ title }}</h1>
             <hr/>
         <form method="POST" action="" enctype="multipart/form-data"> {% csrf_token %}
-            {{ form.as_p }}
+            {{ form|crispy }}
             <input type='submit' class='btn btn-primary' value='Create Post'/>
         </form>
     </div>
