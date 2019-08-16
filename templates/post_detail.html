@@ -31,8 +31,18 @@
                 </div>
                 <hr/>
                 <br/>
-                <div class="fb-comments" data-href="{{ request.build_absolute_uri }}" data-width=""
-                     data-numposts="5"></div>
+                <div>
+                    <p class="lead">Comments</p>
+                    {{ comment.content_object }}
+                    {% for comment in comments %}
+                        <div class="">
+                            {{ comment.content }}
+                            <br/>
+                            <small>via {{ comment.user }} | {{ comment.timestamp|timesince }} ago</small>
+                            <hr/>
+                        </div>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
