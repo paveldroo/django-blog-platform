@@ -46,7 +46,8 @@
                             <footer class="blockquote-footer">via {{ comment.user }} | {{ comment.timestamp|timesince }}
                                 ago | {% if comment.children.count > 0 %} {{ comment.children.count }} Comments
                                     | {% endif %}
-                                <a class="comment-reply-btn" href="#">Reply</a>
+                                <a class="comment-reply-btn" href="#">Reply</a> | <a
+                                        href="{{ comment.get_absolute_url }}">Thread</a>
                             </footer>
                             <div class='comment-reply'>
                                 {% for child_comment in comment.children %}

@@ -111,7 +111,7 @@ def post_detail(request, slug=None):
         )
         return HttpResponseRedirect(new_comment.content_object.get_absolute_url())
 
-    comments = Comment.objects.filter_by_instance(instance)
+    comments = Comment.objects.filter_by_instance_only_parent(instance)
     context = {
         'title': instance.title,
         'instance': instance,
