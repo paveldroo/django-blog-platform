@@ -11,7 +11,8 @@
             <p class="mb-0">{{ comment.content }}</p>
             <footer class="blockquote-footer">via {{ comment.user }} | {{ comment.timestamp|timesince }}
                 ago | {% if comment.children.count > 0 %} {{ comment.children.count }} Comments
-                    | {% endif %}
+                {% endif %} {% if request.user == comment.user %}<a href="{{ comment.get_delete_url }}"> | Delete</a>
+                {% endif %}
             </footer>
             <hr/>
             <div>
@@ -20,6 +21,8 @@
                         <p class="mb-0">{{ child_comment.content }}</p>
                         <footer class="blockquote-footer">via {{ child_comment.user }}
                             | {{ child_comment.timestamp|timesince }} ago
+                            {% if request.user == child_comment.user %} |
+                                <a href="{{ child_comment.get_delete_url }}">Delete</a>{% endif %}
                         </footer>
                     </blockquote>
                 {% endfor %}
