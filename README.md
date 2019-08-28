@@ -1,8 +1,8 @@
 # Django Blog Platform
-- bootstrap 4
-- jquery
 - django 1.9
 - python 2.7
+- bootstrap 4
+- jquery
 
 # Components
 - user registration
