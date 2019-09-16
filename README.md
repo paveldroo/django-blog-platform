@@ -15,6 +15,7 @@
 - posts search
 - markdown
 - stackoverflow-like WISWIG editor
+- post live preview
 
 # Public admin pswd for the educational purpose
 paveldruzhinin
