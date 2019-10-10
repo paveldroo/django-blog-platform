@@ -125,13 +125,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-    # '/var/www/static/',
-]
-
-STATIC_ROOT = os.path.join(os.path.join(os.path.dirname(BASE_DIR), 'Envs/trydjango'), "static_cdn")
-MEDIA_ROOT = os.path.join(os.path.join(os.path.dirname(BASE_DIR), 'Envs/trydjango'), "media_cdn")
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "static"),
+#     # '/var/www/static/',
+# ]
+#
+# STATIC_ROOT = os.path.join(os.path.join(os.path.dirname(BASE_DIR), 'Envs/trydjango'), "static_cdn")
+# MEDIA_ROOT = os.path.join(os.path.join(os.path.dirname(BASE_DIR), 'Envs/trydjango'), "media_cdn")
